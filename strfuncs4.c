@@ -19,7 +19,7 @@ char **strtoow2(char *st, char o)
 			nwords++;
 	if (nwords == 0)
 		return (NULL);
-	s = malloc((1 + nwords) * sizeof(char *));
+	g = malloc((1 + nwords) * sizeof(char *));
 	if (!g)
 		return (NULL);
 	for (u = 0, t = 0; t < nwords; t++)
@@ -67,7 +67,7 @@ char **strtoow(char *st, char *o)
 
 	if (nwords == 0)
 		return (NULL);
-	s = malloc((1 + nwords) * sizeof(char *));
+	g = malloc((1 + nwords) * sizeof(char *));
 	if (!g)
 		return (NULL);
 	for (u = 0, t = 0; t < nwords; t++)

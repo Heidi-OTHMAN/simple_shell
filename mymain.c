@@ -26,9 +26,9 @@ int main(int agc, char **avec)
 				exit(126);
 			if (errno == ENOENT)
 			{
-				_ept(av[0]);
+				_ept(avec[0]);
 				_ept(": 0: Can't open ");
-				_ept(av[1]);
+				_ept(avec[1]);
 				_eptchr('\n');
 				_eptchr(BUF_FLUSH);
 				exit(127);

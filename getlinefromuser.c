@@ -14,7 +14,7 @@ ssize_t get_inpt(info_t *inf)
 	char **buff_p = &(inf->argg), *b;
 
 	_ptchr(BUF_FLUSH);
-	d = inpt_buff(inf, &buff, &ln);
+	d = inpt_buff(&inf, &buff, &ln);
 	if (d == -1) /* EOF */
 		return (-1);
 	if (ln)	/* we have commands left in the chain buffer */
@@ -83,11 +83,11 @@ ssize_t inpt_buff(info_t *inf, char **buff, size_t *ln)
 		/*bfree((void **)info->cmd_buf);*/
 		free(*buff);
 		*buff = NULL;
-		signal(SIGINT, sigintHandler);
+		signal(SIGINT, signhandler);
 #if USE_GETLINE
 		d = getline(buff, &len_x, stdin);
 #else
-		d = _getline(inf, buff, &len_x);
+		d = _gline(inf, buff, &len_x);
 #endif
 		if (d > 0)
 		{

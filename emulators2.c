@@ -18,7 +18,7 @@ int unst_alas(info_t *inf, char *string)
 	m = *b;
 	*b = 0;
 	retu = del_nod_at_inx(&(inf->alas),
-		get_nod_inx(inf->alas, node_starts_with(inf->alas, string, -1)));
+		get_nod_inx(inf->alas, nod_start_with(inf->alas, string, -1)));
 	*b = m;
 	return (retu);
 }

@@ -9,7 +9,7 @@
 char **lst_to_str(list_t *hd)
 {
 	list_t *nod = hd;
-	size_t u = list_len(hd), s;
+	size_t u = list_ln(hd), s;
 	char **stra;
 	char *strr;
 

@@ -51,6 +51,10 @@ void clr_info(info_t *inf)
  */
 void fr_info(info_t *inf, int al)
 {
+	struct list_t l;
+
+	l = malloc(sizeof(struct list_t));
+
 	ffr(inf->arggv);
 	inf->arggv = NULL;
 	inf->paath = NULL;
@@ -59,11 +63,11 @@ void fr_info(info_t *inf, int al)
 		if (!inf->cmd_buff)
 			free(inf->argg);
 		if (inf->enviro)
-			fr_list(&(inf->enviro));
+			fr_list(&(l->enviro));
 		if (inf->his)
-			fr_list(&(inf->his));
+			fr_list(&(l->his));
 		if (inf->alas)
-			fr_list(&(inf->alas));
+			fr_list(&(l->alas));
 		ffr(inf->enviroon);
 			inf->enviroon = NULL;
 		bfr((void **)inf->cmd_buff);
