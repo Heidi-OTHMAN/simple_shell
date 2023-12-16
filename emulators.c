@@ -28,7 +28,7 @@ int _ourcd(info_t *inf)
 	{
 		if (!_genv(inf, "OLDPWD="))
 		{
-			_puuts(s);
+			_puuts(str);
 			_ptchr('\n');
 			return (1);
 		}

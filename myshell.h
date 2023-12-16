@@ -72,9 +72,9 @@ typedef struct passinfo
 	int err_numb;
 	int linecnt_flag;
 	char *fnm;
-	list_t *enviro;
-	list_t *his;
-	list_t *alas;
+	struct list_t *enviro;
+	struct list_t *his;
+	struct list_t *alas;
 	char **enviroon;
 	int env_chng;
 	int stats;
