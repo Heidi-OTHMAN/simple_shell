@@ -7,7 +7,7 @@
  *
  * Return: Always 0 on success, 1 on error
  */
-int unst_alas(info_t *inf, char *string)
+int unst_alas(struct list_t *inf, char *string)
 {
 	char *b, m;
 	int retu;
